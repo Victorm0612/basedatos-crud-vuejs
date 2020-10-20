@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-5" id="nav-bar">
+    <div id="nav-bar">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                 <router-link class="nav-link" active-class="active" to="/">Create</router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Read</a>
+                <router-link class="nav-link" to="/read">Read</router-link>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Update</a>
@@ -33,3 +33,11 @@
         name: 'Cabecera'
     }
 </script>
+
+<style scoped>
+    #nav-bar{
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+    
+</style>

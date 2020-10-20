@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="abs-center flex-column">
-            <h3 class="mb-3">Create a Patient</h3>
+            <h3 class="mb-3">Crear Paciente</h3>
             <form>
             <div class="form-group">
                 <input placeholder="Digite la identificación" type="text" class="form-control" id="numid" name="numid">              
