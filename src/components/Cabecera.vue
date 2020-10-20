@@ -5,10 +5,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse form-inline my-2 my-lg-0" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">
+            <router-link class="navbar-brand" active-class="active" to="/">
                 <img class="mr-2" width="40" height="40" src="@/assets/bored-shrek-meme.png" alt="">
                 A.B.M.O.D.E.L.
-            </a>
+            </router-link>
             <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
                 <router-link class="nav-link" active-class="active" to="/">Create</router-link>
