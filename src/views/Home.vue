@@ -1,17 +1,16 @@
 <template>
   <div class="home">
-    <Cabecera/>
+    <Create/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Cabecera from '@/components/Cabecera.vue'
-
+import Create from '@/components/Create.vue'
 export default {
   name: 'Home',
   components: {
-    Cabecera
+    Create
   }
 }
 </script>

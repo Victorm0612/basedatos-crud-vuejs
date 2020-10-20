@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
       <nav-bar></nav-bar>
-    </div>
-    <router-view/>
+      <router-view/>
   </div>
 </template>
 
 
 <script>
-import navbar from '@/components/Cabecera.vue'
+import NavBar from '@/components/Cabecera.vue';
 export default {
-  navbar
-}
+  name: "App",
+  components: {
+    NavBar
+  }
+};
 </script>
 
 <style>
