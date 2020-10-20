@@ -17,10 +17,10 @@
                 <router-link class="nav-link" to="/read">Read</router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Update</a>
+                <router-link class="nav-link" to="/update">Update</router-link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Delete</a>
+                <router-link class="nav-link" to="/delete">Delete</router-link>
             </li>            
             </ul>
         </div>

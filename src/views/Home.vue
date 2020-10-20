@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <Create/>
+    <Crear/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Create from '@/components/Create.vue'
+import Crear from '@/components/Crear.vue'
 export default {
   name: 'Home',
   components: {
-    Create
+    Crear
   }
 }
 </script>
