@@ -2,6 +2,7 @@
     <div class="container">
         <div class="flex-column" id="tabla">
             <h3 class="mb-3">Leer Pacientes</h3>
+            <button class="btn btn-danger mb-3" @click="leer">Consultar</button>
             <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -11,12 +12,12 @@
                 <th scope="col">Numid</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+            <tbody id="contenido">
+                <tr v-for="item of pacientes" :key="item.id">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+                <td>{{item.numid}}</td>
                 </tr>
             </tbody>
             </table>
@@ -25,9 +26,25 @@
 </template>
 
 <script>
+import axios from 'axios';
     export default {
-        name: 'Leer'
-        
+        name: 'Leer',
+        data(){
+            return{
+                pacientes: []
+            }
+        },
+        methods: {
+            leer(env){
+                env.preventDefault();
+                axios.get('consultatotalpacientes')
+                    .then(res=>{
+                        this.pacientes = res.data
+                        console.log(this.pacientes)
+                    })
+
+            }
+        },
     }
 </script>
 

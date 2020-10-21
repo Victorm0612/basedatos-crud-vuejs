@@ -44,8 +44,8 @@ router.put('/actualizarpacientes', async (req, res) => {
 });
 
 
-router.delete('/borrarpacientes', async (req, res) => {
-  const { id } = req.body;
+router.delete('/borrarpacientes/:id', async (req, res) => {
+  const id  = req.params.id;
   await pool.query(
       `DELETE FROM pacientes WHERE id = '${id}'`
   );
