@@ -16,6 +16,12 @@
                 <input placeholder="Digite el apellido" type="text" class="form-control" v-model="apellido" name="apellido">
             </div>
             <button type="submit" class="mt-3 btn btn-primary" @click="enviar">Actualizar</button>
+            <b-alert class="mt-3" 
+                :show="show"
+                dismissible
+                variant="success"
+                @dismissed="show=false">{{data}}
+            </b-alert>
             </form>  
         </div>
     </div>
@@ -30,7 +36,9 @@ import axios from 'axios';
                 id: '',
                 nombre: '',
                 apellido: '',
-                numid: ''
+                numid: '',
+                data: '',
+                show: false
             }
         },
         methods: {
@@ -42,7 +50,10 @@ import axios from 'axios';
                     apellido: this.apellido,
                     numid: this.numid
                 })
-                .then(res => console.log(res.data))
+                .then(res =>{
+                    this.data = JSON.stringify(res.data.RES);
+                    this.show = !this.show;
+                })
             }
         },
     }

@@ -7,6 +7,12 @@
                 <input placeholder="Digite el id" type="text" class="form-control" v-model.number="id" name="id">              
             </div>
             <button type="submit" class="mt-3 btn btn-danger" @click="eliminar">Eliminar</button>
+            <b-alert class="mt-3" 
+                :show="show"
+                dismissible
+                variant="success"
+                @dismissed="show=false">{{data}}
+            </b-alert>
             </form>  
         </div>
     </div>
@@ -18,14 +24,19 @@ import axios from 'axios';
         name: 'Eliminar',
         data() {
             return {
-                id: ''
+                id: '',
+                data: '',
+                show: false
             }
         },
         methods: {
             eliminar(evt){
                 evt.preventDefault();
                 axios.delete('borrarpacientes/'+this.id)
-                .then(res => console.log(res.data))
+                .then(res =>{
+                    this.data = JSON.stringify(res.data.RES);
+                    this.show = !this.show;
+                })
             }
         },
     }
