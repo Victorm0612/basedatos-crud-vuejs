@@ -43,5 +43,9 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
     }
+    .navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:rgb(31, 216, 124);
+}
     
 </style>

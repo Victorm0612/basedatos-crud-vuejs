@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "start": "cd api && npm start",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "all": "npm-run-all --parallel serve start"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-axios": "^3.1.1",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
